@@ -4,7 +4,7 @@ metadata:
   name: expense-1
   labels:
     environment: dev
-    Namespace: expense
+    namespace: expense
 spec:
   containers:
   - name: nginx
