@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: annotate
+  namespace: expense
+  labels:
+    environment: dev
+  annotations:
+    project: degree
+spec:
+  containers:
+  - name: annot
+    image: nginx
