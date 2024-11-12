@@ -8,3 +8,6 @@ metadata:
     project: expense
     module: backend
 spec:
+  containers:
+  - name: nginx-label
+    image: nginx
