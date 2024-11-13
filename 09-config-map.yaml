@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: dragon
+  labels:
+    environment: dev
+  annotations:
+    gitlink: https://github.com/Amarnadh31/k8s-resources.git
+spec:
+  containers:
+  - name: temp
+    image: nginx
+    ConfigMapRefKey

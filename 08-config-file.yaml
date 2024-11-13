@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-conf
+data:
+  course: devops
+  duration: 120hrs
+  institute: joindev
+  trainer: amar
