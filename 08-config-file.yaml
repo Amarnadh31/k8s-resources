@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: demo-conf
 data:
-  course: devops
+  branch: devops
   duration: 120hrs
   institute: joindev
   trainer: amar
