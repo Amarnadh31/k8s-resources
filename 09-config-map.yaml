@@ -10,4 +10,14 @@ spec:
   containers:
   - name: temp
     image: nginx
-    ConfigMapRefKey
+    env:
+    - name: course
+      valueFrom:
+        configMapKeyRef:
+          name: demo-conf
+          key: branch
+    - name: duration
+      valueFrom:
+        configMapKeyRef:
+          name: demo-conf
+          key: institute
