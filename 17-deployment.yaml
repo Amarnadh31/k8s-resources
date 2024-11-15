@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy
+  labels:
+    environment: dev
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      environment: dev
+      project: expense
+      module: backend
+  template:
+    metadata:
+      name: deploy-pod
+      labels:
+        environment: dev
+        project: expense
+        module: backend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx         
