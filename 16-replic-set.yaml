@@ -8,7 +8,7 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLabel:
+    matchLabels:
       environment: dev
       project: expense
       module: prod
