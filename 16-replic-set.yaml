@@ -1,0 +1,14 @@
+apiVersion: app/v1
+kind: ReplicaSet
+metadata:
+  name: replica-set
+  labels:
+    project: expense
+    environment: dev
+spec:
+  replicas: 3
+  selector:
+    matchLabel:
+      environment: dev
+      project: expense
+      module: prod
