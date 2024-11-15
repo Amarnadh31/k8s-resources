@@ -14,7 +14,6 @@ spec:
       module: prod
   template:
     metadata:
-      name: nginx
       labels:
         environment: dev
         project: expense
