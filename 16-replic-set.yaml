@@ -3,8 +3,8 @@ kind: ReplicaSet
 metadata:
   name: replica-set
   labels:
-    project: expense
-    environment: dev
+    project: defense
+    environment: prod
 spec:
   replicas: 3
   selector:
@@ -12,3 +12,17 @@ spec:
       environment: dev
       project: expense
       module: prod
+  template:
+    metadata:
+      name: nginx
+      labels:
+        environment: dev
+        project: expense
+        module: prod
+    spec:
+     containers:
+     - name: nginx
+       image: nginx
+
+      
+  
