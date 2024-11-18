@@ -34,11 +34,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: static-pv
+  name: dynamic-pv
 spec:
   type: NodePort
   selector:
-    module: static
+    module: dynamic
   ports:
   - name: nginx-pv
     protocol: TCP
