@@ -38,7 +38,7 @@ metadata:
   labels:
     project: expense
     environment: dev
-spce:
+spec:
   containers:
   - name: expense-cont
     image: nginx
