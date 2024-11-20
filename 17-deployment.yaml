@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       environment: dev
-      project: expense
+      project: self
       module: backend
   template:
     metadata:
