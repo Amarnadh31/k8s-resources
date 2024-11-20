@@ -26,6 +26,7 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
+  storageClassName: ""
   volumeName: expense-efs-static
   resources:
     requests:
