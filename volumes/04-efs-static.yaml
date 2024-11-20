@@ -45,7 +45,7 @@ spec:
     volumeMounts:
     - name: expense-efs-static
       mountPath: /usr/share/nginx/html/
-Volume:
+volumes:
 - name: expense-efs-static
   persistentVolumeClaim:
     claimName: expense-efs-static-claim
