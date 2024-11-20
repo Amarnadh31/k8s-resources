@@ -28,7 +28,6 @@ kind: Service
 metadata:
   name: demo-service
 spec:
-  type: NodePort
   selector:
     environment: dev
     project: self
