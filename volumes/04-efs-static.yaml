@@ -30,3 +30,41 @@ spec:
   resources:
     requests:
       storage: 3Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: efs-pod
+  labels:
+    project: expense
+    environment: dev
+spce:
+  containers:
+  - name: expense-cont
+    image: nginx
+    volumeMounts:
+    - name: expense-efs-static
+      mountPath: /usr/share/nginx/html/
+volumes:
+- name: expense-efs-static
+  persistentVolumeClaim:
+    claimName: expense-efs-static-claim
+---
+apiversion: v1
+kind: Service
+metadata:
+  name: efs-service
+  labels:
+    project: expense
+    environment: dev
+spec:
+  type: LoadBalancer
+  selector:
+    project: expense
+    environment: dev
+  ports:
+  - name: nginx-service-port
+    protocol: TCP
+    port: 80
+    targetPort: 80
+
