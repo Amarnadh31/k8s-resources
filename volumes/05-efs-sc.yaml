@@ -8,4 +8,4 @@ parameters:
   fileSystemId: fs-0e1581e636b0f257e
   directoryPerms: "700"
   basePath: "/expense"
-  volumeBindingMode: 
+  volumeBindingMode: Immediate
